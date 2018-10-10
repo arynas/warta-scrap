@@ -88,3 +88,13 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# ITEM_PIPELINES = ['detik.pipelines.DetikPipeline']
+ITEM_PIPELINES = {
+    'detik.pipelines.DetikPipeline': 300,
+}
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "news_crawler"
+MONGODB_COLLECTION = "detik"
